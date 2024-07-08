@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var arr = [12, 34, 21, 26, 54];
+        arr.forEach((ele) => {
+            document.write(ele + "<br>")
+        })
+
+        arr.map((ele) => {
+            document.write(ele + "<br>")
+        })
+
+        // diff b/w map and forEach 
+        var newArr = arr.forEach((ele) => {
+            return ele * 2;
+        })
+        console.log(newArr) // no return(undefined)
+
+        var mapArr = arr.map((ele) => {
+            return ele * 2;
+        })
+        console.log(arr)
+        console.log(mapArr)
+
+        // map is return the new array and not the change in original array 
+        var filterArr = arr.filter((ele) => {
+            return ele > 25;
+        })
+        console.log(arr)
+        console.log(filterArr)
+    </script>
+</body>
+
+</html>
